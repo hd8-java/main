@@ -114,18 +114,12 @@ Made by @hd8!
     -- -386.658661, 57.0735207, -13.8351641, 0.263599187, 2.53987835e-08, -0.964632273, -7.54971623e-08, 1, 5.69936454e-09, 0.964632273, 7.13246564e-08, 0.263599187
     
    
-    Tabs.Teleport:AddButton({
-        Title = "Universal Script",
-        Description = "This is gonna teleport you to {txt} island!",
-        Callback = function()
-            rootPart.CFrame = CFrame.new(0, 0, 0)
-        end
-    })
+    
 
 local Dropdown = Tabs.Teleport:AddDropdown("Dropdown", {
     Title = "test",
     Description = "Dropdown description",
-    Values = {"one", "two", "three"},
+    Values = {"Slapple", "Arena", "Deafult Arena"},
     Multi = false,
     Default = nil,
     Callback = function(Value)
@@ -142,3 +136,5 @@ InterfaceManager:SetLibrary(Fluent)
 
 InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
+
+-- Latest Realese of Fluent!!!!
