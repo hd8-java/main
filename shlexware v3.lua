@@ -1,6 +1,8 @@
+--[[
+          Booting
+Made by @hd8!
 
-          --Booting
-
+          --]]
           local Library = loadstring(game:HttpGet("https://github.com/1dontgiveaf/Fluent/releases/latest/download/main.lua"))()
           local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/1dontgiveaf/Fluent/main/Addons/SaveManager.lua"))()
           local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/1dontgiveaf/Fluent/main/Addons/InterfaceManager.lua"))()
@@ -8,7 +10,7 @@
           
           
           local Window = Fluent:CreateWindow({
-              Title = "Shlexware V3 | Slap Battles",
+              Title = "Shlexware V3 | Universal",
               SubTitle = "by hd8",
               TabWidth = 160,
               Size = UDim2.fromOffset(580, 460),
@@ -112,13 +114,28 @@
     -- -386.658661, 57.0735207, -13.8351641, 0.263599187, 2.53987835e-08, -0.964632273, -7.54971623e-08, 1, 5.69936454e-09, 0.964632273, 7.13246564e-08, 0.263599187
     
    
-    Tabs.Main:AddButton({
-        Title = "",
+    Tabs.Teleport:AddButton({
+        Title = "Universal Script",
         Description = "This is gonna teleport you to {txt} island!",
         Callback = function()
             rootPart.CFrame = CFrame.new(0, 0, 0)
         end
     })
+
+local Dropdown = Tabs.Teleport:AddDropdown("Dropdown", {
+    Title = "test",
+    Description = "Dropdown description",
+    Values = {"one", "two", "three"},
+    Multi = false,
+    Default = nil,
+    Callback = function(Value)
+        print("Dropdown was changed:", Value)
+          if Value == "one" then
+          print("Works!!!")
+          end
+    end
+})
+          
 
     SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
